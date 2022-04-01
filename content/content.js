@@ -13,6 +13,13 @@ app.use('/content', require('./routes/contentRoute'))
 
 const PORT = process.env.PORT || 3000
 
+app.use('*', (req, res, next) => {
+  res.status(404).json({
+    status: 'error',
+    message: 'Route not implemented yet!',
+  })
+})
+
 app.listen(PORT, () => {
   console.log(`Content server is listening on port ${PORT}`)
 })
