@@ -81,7 +81,7 @@ exports.getContentForUser = async (req, res) => {
     const { userId } = req.params
     let config = {
       method: 'get',
-      url: `http://127.0.0.1:5555/users/${userId}`,
+      url: `https://rhubarb-crisp-80148.herokuapp.com/users/${userId}`,
     }
     const user = await axios(config)
 

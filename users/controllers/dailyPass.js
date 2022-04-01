@@ -8,7 +8,7 @@ exports.unlockChapters = async (req, res) => {
 
     let userId = await User.findById(user)
     let seriesId = await axios.get(
-      `http://127.0.0.1:8888/content/id/${req.params.series}`
+      `https://strawberry-cobbler-89797.herokuapp.com/content/id/${series}`
     )
     //invalid userId
     if (!userId) {
